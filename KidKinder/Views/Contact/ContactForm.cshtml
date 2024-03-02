@@ -1,0 +1,47 @@
+﻿@model KidKinder.Models.SenddMessageViewModel
+
+<div class="col-lg-7 mb-5">
+    <div class="contact-form">
+        <div id="success"></div>
+        <form method="post" action="/Contact/SendMessage/">
+            <div class="control-group">
+                <input type="text"
+                       name="NameSurname"
+                       class="form-control"
+                       placeholder="Adınız" />
+                <p class="help-block text-danger"></p>
+            </div>
+            <div class="control-group">
+                <input type="email"
+                       class="form-control"
+                       id="email"
+                       name="Email"
+                       placeholder="Mailiniz" />
+                <p class="help-block text-danger"></p>
+            </div>
+            <div class="control-group">
+                <input type="text"
+                       class="form-control"
+                       id="subject"
+                       name="Subject"
+                       placeholder="Konu" />
+                <p class="help-block text-danger"></p>
+            </div>
+            <div class="control-group">
+                <textarea class="form-control"
+                          rows="6"
+                          name="Message"
+                          id="message"
+                          placeholder="Mesajınız"></textarea>
+                <p class="help-block text-danger"></p>
+            </div>
+            <div>
+                <button class="btn btn-primary py-2 px-4"
+                        type="submit"
+                        id="sendMessageButton">
+                    Mesaj Gönder
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

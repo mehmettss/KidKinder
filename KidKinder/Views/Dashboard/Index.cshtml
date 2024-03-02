@@ -1,0 +1,230 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<link rel="stylesheet" type="text/css" href="~/Templates/material_able-main/assets/css/font-awesome-n.min.css">
+
+<div class="pcoded-inner-content">
+
+    <div class="main-body">
+        <div class="page-wrapper">
+
+            <div class="page-body">
+                <div class="row">
+
+                    <div class="col-xl-4 col-md-12">
+                        <div class="card mat-stat-card">
+                            <div class="card-block">
+                                <div class="row align-items-center b-b-default">
+                                    <div class="col-sm-6 b-r-default p-b-20 p-t-20">
+                                        <div class="row align-items-center text-center">
+                                            <div class="col-4 p-r-0">
+                                                <i class="far fa-user text-c-purple f-24"></i>
+                                            </div>
+                                            <div class="col-8 p-l-0">
+                                                <h5>@ViewBag.branchIdByResimCizme</h5>
+                                                <p class="text-muted m-b-0">Resim Cizim Ogretmeni</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 p-b-20 p-t-20">
+                                        <div class="row align-items-center text-center">
+                                            <div class="col-4 p-r-0">
+                                                <i class="fas fa-volume-down text-c-green f-24"></i>
+                                            </div>
+                                            <div class="col-8 p-l-0">
+                                                <h5> @ViewBag.AvgPrice</h5>
+                                                <p class="text-muted m-b-0">Ortalama Fiyat</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row align-items-center">
+                                    <div class="col-sm-6 p-b-20 p-t-20 b-r-default">
+                                        <div class="row align-items-center text-center">
+                                            <div class="col-4 p-r-0">
+                                                <i class="far fa-file-alt text-c-red f-24"></i>
+                                            </div>
+                                            <div class="col-8 p-l-0">
+                                                <h5>@ViewBag.TotalAdmin</h5>
+                                                <p class="text-muted m-b-0">Admin Sayısı</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 p-b-20 p-t-20">
+                                        <div class="row align-items-center text-center">
+                                            <div class="col-4 p-r-0">
+                                                <i class="far fa-envelope-open text-c-blue f-24"></i>
+                                            </div>
+                                            <div class="col-8 p-l-0">
+                                                <h5> @ViewBag.TotalMessage</h5>
+                                                <p class="text-muted m-b-0">Gelen Mesaj Sayısı</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-md-12">
+                        <div class="card mat-stat-card">
+                            <div class="card-block">
+                                <div class="row align-items-center b-b-default">
+                                    <div class="col-sm-6 b-r-default p-b-20 p-t-20">
+                                        <div class="row align-items-center text-center">
+                                            <div class="col-4 p-r-0">
+                                                <i class="far fa-user text-c-purple f-24"></i>
+                                            </div>
+                                            <div class="col-8 p-l-0">
+                                                <h5>@ViewBag.RezervasyonCount</h5>
+                                                <p class="text-muted m-b-0">Rezervasyon Sayısı</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 p-b-20 p-t-20">
+                                        <div class="row align-items-center text-center">
+                                            <div class="col-4 p-r-0">
+                                                <i class="fas fa-volume-down text-c-green f-24"></i>
+                                            </div>
+                                            <div class="col-8 p-l-0">
+                                                <h5>@ViewBag.ClassCount </h5>
+                                                <p class="text-muted m-b-0">Sınıf Sayısı</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row align-items-center">
+                                    <div class="col-sm-6 p-b-20 p-t-20 b-r-default">
+                                        <div class="row align-items-center text-center">
+                                            <div class="col-4 p-r-0">
+                                                <i class="far fa-file-alt text-c-red f-24"></i>
+                                            </div>
+                                            <div class="col-8 p-l-0">
+                                                <h5>@ViewBag.BranchCount</h5>
+                                                <p class="text-muted m-b-0">Ders Sayısı</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 p-b-20 p-t-20">
+                                        <div class="row align-items-center text-center">
+                                            <div class="col-4 p-r-0">
+                                                <i class="far fa-envelope-open text-c-blue f-24"></i>
+                                            </div>
+                                            <div class="col-8 p-l-0">
+                                                <h5>@ViewBag.TeacherCount</h5>
+                                                <p class="text-muted m-b-0">Ogretmenler Sayısı</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-12">
+                        <div class="card mat-clr-stat-card text-white green ">
+                            <div class="card-block">
+                                <div class="row">
+                                    <div class="col-3 text-center bg-c-green">
+                                        <i class="fas fa-star mat-icon f-24"></i>
+                                    </div>
+                                    <div class="col-9 cst-cont">
+                                        <h5>@ViewBag.HighestPricedClassTitle</h5>
+                                        <p class="m-b-0">En Yuksek Fiyatlı Sınıf</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="card mat-clr-stat-card text-white blue">
+                            <div class="card-block">
+                                <div class="row">
+                                    <div class="col-3 text-center bg-c-blue">
+                                        <i class="fas fa-trophy mat-icon f-24"></i>
+                                    </div>
+                                    <div class="col-9 cst-cont">
+                                        <h5>@ViewBag.LowestPricedClassTitle</h5>
+                                        <p class="m-b-0">En Dusuk Fiyatlı Sınıf</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @Html.Action("_DashboardTestimonialPartial")
+                    @Html.Action("_DashboardTeacherPartial")
+              
+                    <!-- Modal -->
+                    <div class="modal fade" id="grafikModal" tabindex="-1" role="dialog" aria-labelledby="grafikModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="grafikModalLabel">Grafik</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div id="Piechart_div"></div>
+                                    <div id="grafik_div"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Buton -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#grafikModal">
+                        Sınıf-Fiyat Grafik
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+    google.charts.load('current', {
+        'packages': ['corechart']
+    });
+    google.charts.setOnLoadCallback(fetchChartData);
+
+    function fetchChartData() {
+        $.ajax({
+            type: "POST",
+            dataType: "json",
+            contentType: "application/json",
+            url: '@Url.Action("_GrafikPartial","Dashboard")',
+            success: function (result) {
+                drawChart(result);
+            }
+        });
+    }
+
+    function drawChart(result) {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Name');
+        data.addColumn('number', 'Stoklar');
+        var dataArray = [];
+
+        $.each(result, function (i, obj) {
+            dataArray.push([obj.Sınıf, obj.Fiyat]);
+        });
+        data.addRows(dataArray);
+
+        var columnChartOptions = {
+            title: "Sınıf - Fiyatlandırma Grafigi",
+            width: 400,
+            height: 400,
+            bar: { groupWidth: "20%" },
+        };
+
+        var columnChart = new google.visualization.PieChart(document.getElementById('Piechart_div'));
+
+        columnChart.draw(data, columnChartOptions);
+    }
+</script>
+

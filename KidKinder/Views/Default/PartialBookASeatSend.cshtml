@@ -1,0 +1,76 @@
+﻿﻿
+
+
+
+@model KidKinder.Entities.BookASeat
+
+<div class="col-lg-5">
+    <div class="card border-0">
+        <div class="card-header bg-secondary text-center p-4">
+            <h1 class="text-white m-0">Koltuk Ayırtın</h1>
+        </div>
+        <div class="card-body rounded-bottom bg-primary p-5">
+            <form method="post" action="/Default/BookNow/">
+                <div class="form-group">
+                    <input type="text"
+                           class="form-control border-0 p-4"
+                           placeholder="Adınız" id="name"
+                           name="Name"
+                           required="required" />
+                </div>
+                <div class="form-group">
+                    <input type="text" id="mail"
+                           class="form-control border-0 p-4"
+                           placeholder="Mail Adresiniz"
+                           name="Email"
+                           required="required" />
+                </div>
+                <div class="form-group">
+                    <select class="custom-select border-0 px-4"
+                            style="height: 47px">
+                        <option selected>Bir Sınıf Secin</option>
+                        <option value="1">Sınıf A</option>
+                        <option value="2">Sınıf B</option>
+                        <option value="3">Sınıf C</option>
+                    </select>
+                </div>
+                <div>
+                    <button onclick="booknow()" class="btn btn-secondary btn-block border-0 py-3"
+                            type="submit">
+                        Rezervasyon Yap
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#bookForm').submit(function (e) {
+            e.preventDefault();
+            var name = $("#name").val();
+            var mail = $("#mail").val();
+            var drop = $("#drop").val();
+            var values = {
+                Name: name,
+                Email: mail,
+                ClassRoomId: drop
+            };
+            $.ajax({
+                url: "/Default/BookNow/",
+                contentType: "application/json",
+                dataType: "json",
+                method: "post",
+                data: JSON.stringify(values),
+                success: function (func) {
+                    swal("Kaydınız başarıyla oluşturuldu.", "", "info").then((result) => {
+                        location.reload();
+                    });
+                }
+            });
+        });
+    });
+</script>

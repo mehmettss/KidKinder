@@ -1,0 +1,65 @@
+﻿@model List<KidKinder.Entities.Admin>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<div class="pcoded-inner-content">
+    <!-- Main-body start -->
+    <div class="main-body">
+        <div class="page-wrapper">
+            <!-- Page-body start -->
+            <div class="page-body">
+
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Kullanıcı Listesi Tablosu</h5>
+                        <span>Kullanıcı ile ilgili işlemleri yapabileceğiniz alandır.</span>
+                        <div class="card-header-right">
+                            <ul class="list-unstyled card-option">
+                                <li><i class="fa fa fa-wrench open-card-option"></i></li>
+                                <li><i class="fa fa-window-maximize full-card"></i></li>
+                                <li><i class="fa fa-minus minimize-card"></i></li>
+                                <li><i class="fa fa-refresh reload-card"></i></li>
+                                <li><i class="fa fa-trash close-card"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-block table-border-style">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Kullanıcı Adı</th>
+                                        <th>Sifre</th>
+                                
+                                        <th>Sil</th>
+
+                                        <th>Güncelle</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>@item.AdminId</td>
+                                            <td>@item.Username</td>
+                                            <td>@item.Password</td>
+                                 
+
+
+                                            <td><a href="/AdminProfile/DeleteUser/@item.AdminId/" class="btn btn-danger">Sil</a></td>
+                                            <td><a href="/AdminProfile/UpdateUser/@item.AdminId/" class="btn btn-success">Güncelle</a></td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                            <a href="/AdminProfile/AddUser/" class="btn btn-primary">Yeni Kullanıcı Ekle</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
